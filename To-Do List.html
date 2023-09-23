@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO List</title>
+    
+</head>
+<style>
+    body{
+    background-color:cornsilk;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-family: arial;
+}
+.container{
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px gray;
+    padding: 25px;
+    text-align: center;
+}
+#txtInput{
+    width: 60%;
+    padding: 10px;
+    border: 1px solid rgb(91, 162, 244);
+    border-radius: 6px;
+}
+#addTxt{
+    padding: 8px;
+    background-color: #1965cf;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#txtList{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    background-color:white;
+    border: 1px solid rgb(245, 244, 242);
+    border-radius:4px ;
+    padding:  5px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 34, 0);
+}
+li button{
+    background-color: rgb(239, 16, 16);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    
+}
+li button:first-child{
+    background-color: rgba(14, 172, 2, 0.858);
+    margin-right:5px ;
+}
+h1{
+    color: rgb(242, 54, 21);
+    font-weight: bold;
+}
+li button:hover{
+    opacity: 0.8;
+}
+#addTxt:hover{
+    opacity: 0.9;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <span><input type="text" id="txtInput" placeholder="Add a new text...">
+         <button onclick="addClick()" id="addTxt">Add Text</button>   
+        </span>
+        <ul id="txtList"></ul>
+    </div>
+    
+    <script>
+        //  Add text button...
+function addClick(){
+    let txtInput = document.getElementById("txtInput");
+    let taskTxt  = txtInput.value.trim();
+      
+    if(taskTxt===""){
+        alert("Write Task");
+    }else{
+        let txtList = document.getElementById("txtList");
+        let txtItem = document.createElement("li");
+        txtItem.innerHTML = taskTxt + '<button onclick="editClick(this)">Edit</button> <button onclick=deleteClick(this)>Delete</button>';
+        txtList.appendChild(txtItem);
+        txtInput.value="";
+    }
+    saveData();
+
+}
+//    Edit button
+  
+ function editClick(button){
+      let editTxtBtn = button.parentNode.firstChild.textContent;
+      let newList = prompt("Edit Your Text", editTxtBtn);
+      if(newList ==""){
+        alert("Write Task");
+      }else{
+        button.parentNode.firstChild.textContent=newList;
+      }
+      saveData();
+ }
+//    Delete button
+ function deleteClick(button){
+    let deleteList = confirm("Are you sure delete your text?");
+    if(deleteList){
+        button.parentNode.remove();
+    }
+    saveData();
+ }
+//   Save data localStorage
+ function saveData(){
+    localStorage.setItem("data",txtList.innerHTML);
+ }
+ function showList(){
+      txtList.innerHTML=localStorage.getItem("data");
+ }
+ showList()
+    </script>
+</body>
+</html>
