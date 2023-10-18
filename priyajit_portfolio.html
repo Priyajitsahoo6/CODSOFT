@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyajit_Sahoo</title>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+        transition: all .2s linear;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow: hidden;
+    }
+
+    body {
+        background: #9292ed;
+        overflow-x: hidden;
+        padding-left: 35rem;
+    }
+
+    section {
+        min-height: 100vh;
+        padding: 1rem;
+
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        height: 100%;
+        width: 35rem;
+        background: rgba(34, 33, 33, 0.804);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+
+    }
+
+    header .user img {
+        height: 17rem;
+        width: 17rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: .7rem solid rgb(236, 221, 8);
+
+    }
+
+    header .user .name {
+        font-size: 3.5rem;
+        color: #fff;
+    }
+
+    header .user .post {
+        font-size: 2rem;
+        color: #eee;
+    }
+
+    header .navbar {
+        width: 100%;
+    }
+
+    header .navbar ul {
+        list-style: none;
+        padding: 1rem 3rem;
+    }
+
+    header .navbar ul li a {
+        display: block;
+        padding: 1rem;
+        margin: 1rem;
+        background-color: #333;
+        color: #fff;
+        font-size: 2rem;
+        border-radius: 5rem;
+    }
+
+    header .navbar ul li a:hover {
+        background-color: rgba(221, 239, 22, 0.849);
+    }
+
+    .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        padding: 0 15rem;
+    }
+
+    .home h3 {
+        font-size: 2.5rem;
+        color: #fff;
+    }
+
+    .home h1 {
+        font-size: 5rem;
+        color: #fff;
+    }
+
+    .home p {
+        font-size: 2rem;
+        color: #eee;
+        padding: 1rem 0;
+    }
+
+    .home h1 span {
+        color: yellow;
+    }
+
+    .home p {
+        font-size: 2rem;
+        color: #eee;
+    }
+
+    #btn {
+        padding: .7rem 3rem;
+        background-color: #333;
+        color: #fff;
+        margin-top: 1rem;
+        cursor: pointer;
+        font-size: 2rem;
+        border-radius: 5rem;
+    }
+
+    #btn:hover {
+        background: rgba(174, 174, 18, 0.963);
+    }
+
+    .heading {
+        text-align: center;
+        margin: 0 6rem;
+        font-size: 4rem;
+        padding: 1rem;
+        border-bottom: .1rem solid #fff4;
+        color: #fff;
+
+    }
+
+    .heading span {
+        color: yellow;
+    }
+
+    .about .row .counter p {
+        font-size: 1.7rem;
+        color: rgb(243, 243, 243);
+        padding-left: 2rem;
+        margin-top: 20px;
+    }
+
+    .about .row .info h3 {
+        font-size: 2rem;
+        color: yellow;
+        padding: 1rem 0;
+        font-weight: normal;
+
+    }
+
+    .about .row .info h3 span {
+        color: #eee;
+        padding: 0 .5rem;
+        margin-left: 16px;
+    }
+
+    .education .box-container .box h3 {
+        margin-top: 30px;
+        margin-left: 20px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .education .box-container .box h3 span {
+        margin-left: 15px;
+
+
+    }
+
+    meter::-webkit-meter-optimum-value {
+        background: rgb(243, 200, 48);
+
+
+    }
+
+    meter {
+        width: 40%;
+    }
+
+    .project .box-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2rem 0;
+    }
+
+    .project .box-container .box h2 {
+        text-align: center;
+        margin-top: 2px;
+        color: white;
+    }
+
+    .contactRow {
+        display: flex;
+        margin-left: 25px;
+        margin-top: 50px;
+    }
+
+    .titlee {
+        color: rgb(245, 193, 35);
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .info {
+        color: white;
+        margin-top: 10px;
+
+    }
+
+    .info h3 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+</style>
+
+<body>
+
+    <header>
+        <div class="user">
+            <img src="../public/images/DPsonu.png" alt="">
+            <h3 class="name">Priyajit sahoo</h3>
+            <p class="post">Front end devloper</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Skills</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <h3>HI</h3>
+        <h1>I'M <span>priyajit sahoo</span></h1>
+        <p>Enthusiastic and dedicated UI full stack developer with a strong foundation in computer science and a passion
+            for creating efficient and scalable application.</p>
+        <a href="https://drive.google.com/file/d/1pfBlboz7QqiNz4m8cXo7Vzd3H7ijFcdw/view"><button id="btn">downloade
+                CV</button></a>
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="heading"> <span>about</span> me</h1>
+
+        <div class="row">
+
+
+
+            <div class="counter">
+                <p>I am a MCA Student at Biju Patnaik University of Technology. I enjoy problem-solving and coding.
+                    Always strive to bring 100% to the work I do. I have worked on technologies like HTML5 , CSS,
+                    JavaScript , MongoDB , Reactjs .
+                <p>
+                <p>I pride myself on being an effective team player with excellent communication skills. I understand
+                    the importance of collaboration in software development, and I strive to foster an environment of
+                    open communication and mutual respect. I enjoy working alongside cross-functional teams, leveraging
+                    our diverse skill sets to deliver high-quality software solutions that exceed expectations.</p>
+                <p>I am open to new opportunities that allow me to contribute my skills and make a meaningful impact
+                    Please feel free to reach out to me via phone or email, and I look forward to connecting with you.
+                </p>
+            </div>
+            <div class="info">
+                <h3><span> name :</span>priyajit sahoo</h3>
+                <h3><span> age :</span>24</h3>
+                <h3><span> qualification :</span>MCA</h3>
+                <h3><span> post :</span>front end devloper</h3>
+                <h3><span> language :</span>english</h3>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="education" id="education">
+        <h1 class="heading">my <span>skills</span> </h1>
+        <div class="box-container">
+
+            <div class="box">
+                <h3>HTML<span><meter min="1" max="100" value="98"></meter>98%</span></h3>
+            </div>
+
+            <div class="box">
+                <h3>CSS<span><meter min="1" max="100" value="90"></meter>90%</span></h3>
+            </div>
+
+            <div class="box">
+                <h3>JavaScript<span><meter min="1" max="100" value="95"></meter>95%</span></h3>
+            </div>
+
+            <div class="box">
+                <h3>Reactjs<span><meter min="1" max="100" value="80"></meter>80%</span></h3>
+            </div>
+            <div class="box">
+                <h3>Bootstarp<span><meter min="1" max="100" value="85"></meter>85%</span></h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="project" id="project">
+        <h1 class="heading">my <span>project</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="../public/images/calculater.png" alt="" height="80%" width="100%">
+                <h2>Calculator</h2>
+            </div>
+
+            <div class="box">
+                <img src="../public/images/todolist.png" alt="" height="80%" width="250">
+                <h2>TO-DO-List</h2>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"><span>contact</span>me</h1>
+        <div class="contactRow">
+            <div class="contact">
+                <h3 class="titlee">Contact info</h3>
+                <div class="info">
+                    <h3>Priyajitsahoo6@gmail.com</h3>
+                    <h3>+91 9938387420</h3>
+                    <h3>Hyderabad, telangana</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
